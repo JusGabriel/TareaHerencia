@@ -1,3 +1,5 @@
+package Ejercicio1;
+
 public class Perro extends Animal {
 
     Perro(String nombre, int edad){

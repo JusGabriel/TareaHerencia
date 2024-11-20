@@ -1,3 +1,5 @@
+package Ejercicio1;
+
 public class Animal {
     private String nombre;
     private int edad;

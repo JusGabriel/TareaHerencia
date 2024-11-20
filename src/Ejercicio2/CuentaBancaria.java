@@ -3,12 +3,12 @@ package Ejercicio2;
 import java.util.Scanner;
 
 public class CuentaBancaria {
-    private String cliente;
+    private Cliente cliente;
     private String numeroCuenta;
     private double saldo;
 
     CuentaBancaria(Cliente cliente, String numeroCuenta, double saldo) {
-        this.cliente = cliente.getNombreDelCliente();
+        this.cliente = cliente;
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
     }
@@ -38,14 +38,15 @@ public class CuentaBancaria {
     }
 
     public double depositar(double montoDepositar) {
-        return saldo + montoDepositar;
+        this.saldo += montoDepositar;
+        return this.saldo;
     }
 
     public double retirar(double monto) {
-        if (saldo <= monto) {
-            saldo = saldo - monto;
+        if (saldo >= monto) {
+            saldo -= saldo - monto;
         }
-        return saldo;
+        return this.saldo;
     }
 
     public void mostrarInformacion() {

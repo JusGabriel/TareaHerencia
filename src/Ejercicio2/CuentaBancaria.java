@@ -13,7 +13,7 @@ public class CuentaBancaria {
         this.saldo = saldo;
     }
 
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
@@ -23,6 +23,10 @@ public class CuentaBancaria {
 
     public double getSaldo() {
         return saldo;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     public void setSaldo(double saldo) {

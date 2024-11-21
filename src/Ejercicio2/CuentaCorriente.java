@@ -7,13 +7,11 @@ public class CuentaCorriente extends CuentaBancaria{
     }
 
     @Override
-    public double depositar(double montoDepositar) {
-        return super.depositar(montoDepositar);
-    }
-
-    @Override
     public double retirar(double monto) {
-        double comision = monto*2/100;
-        return super.retirar(comision);
+        double comision = monto * 0.02;
+        if (this.getSaldo() >= (monto+comision)) {
+            return super.retirar(monto +comision);
+        } 
+            return this.getSaldo();
     }
 }

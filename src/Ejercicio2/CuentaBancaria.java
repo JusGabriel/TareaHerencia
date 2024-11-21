@@ -28,10 +28,6 @@ public class CuentaBancaria {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-    
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
 
     public void setNumeroCuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
